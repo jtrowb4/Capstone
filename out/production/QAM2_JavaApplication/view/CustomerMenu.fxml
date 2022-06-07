@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerMenu">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <top>
+                <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="60.0" prefWidth="720.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" text="Customer Menu" underline="true">
+                            <font>
+                                <Font name="Droid Sans" size="24.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                            <HBox.margin>
+                                <Insets left="30.0" top="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <opaqueInsets>
+                        <Insets left="10.0" />
+                    </opaqueInsets></HBox>
+            </top>
+            <bottom>
+                <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toMainMenu" prefHeight="30.0" prefWidth="120.0" text="Back" textAlignment="CENTER" underline="true">
+                            <font>
+                                <Font name="Droid Sans" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="20.0" />
+                    </BorderPane.margin></HBox>
+            </bottom>
+            <right>
+                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="533.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-insets: 2; -fx-translate-x: -20;" BorderPane.alignment="CENTER">
+                    <center>
+                        <TableView fx:id="customerTable" prefHeight="314.0" prefWidth="470.0">
+                            <columns>
+                                <TableColumn fx:id="customerID" maxWidth="290.0" prefWidth="70.0" text="ID" />
+                                <TableColumn fx:id="customerName" maxWidth="290.0" prefWidth="150.0" text="Name" />
+                                <TableColumn fx:id="customerAddress" maxWidth="290.0" prefWidth="190.0" text="Address" />
+                                <TableColumn fx:id="customerDivision" maxWidth="290.0" prefWidth="110.0" text="Division" />
+                                <TableColumn fx:id="customerPostal" maxWidth="290.0" prefWidth="100.0" text="Postal Code" />
+                                <TableColumn fx:id="customerPhone" maxWidth="290.0" prefWidth="100.0" text="Phone" />
+                            </columns>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TableView>
+                    </center>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <top>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label alignment="TOP_LEFT" opacity="0.8" text="Customers">
+                                    <font>
+                                        <Font name="Droid Sans" size="20.0" />
+                                    </font>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="10.0" />
+                           </HBox.margin>
+                                </Label>
+                                <TextField fx:id="customerSearch" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#searchCustomer" prefHeight="24.0" prefWidth="226.0" promptText="Search by CustomerID or Name" style="-fx-translate-x: 180; -fx-translate-y: -5;">
+                                    <font>
+                                        <Font name="Droid Sans" size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children></HBox>
+                    </top>
+                    <bottom>
+                        <HBox alignment="BOTTOM_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="350.0" spacing="15.0" BorderPane.alignment="CENTER">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <BorderPane.margin>
+                                <Insets right="10.0" />
+                            </BorderPane.margin>
+                            <padding>
+                                <Insets bottom="5.0" />
+                            </padding></HBox>
+                    </bottom>
+                    <left>
+                        <VBox prefHeight="200.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                    </left>
+                    <right>
+                        <VBox prefHeight="200.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                    </right>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </BorderPane>
+            </right>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+         <left>
+            <VBox maxHeight="-Infinity" prefHeight="400.0" prefWidth="210.0" style="-fx-spacing: 40; -fx-alignment: center;" BorderPane.alignment="CENTER">
+               <children>
+                          <Button fx:id="addCustomerButton" mnemonicParsing="false" onAction="#loadAddCustomer" opacity="0.8" prefHeight="45.0" prefWidth="150.0" text="Add">
+                              <font>
+                                  <Font name="Droid Sans" size="20.0" />
+                              </font>
+                          </Button>
+                          <Button fx:id="modifyCustomerButton" mnemonicParsing="false" onAction="#loadModifyCustomer" opacity="0.8" prefHeight="45.0" prefWidth="150.0" text="Modify">
+                              <font>
+                                  <Font name="Droid Sans" size="20.0" />
+                              </font>
+                  </Button>
+                          <Button fx:id="deleteCustomerButton" mnemonicParsing="false" onAction="#loadDeleteCustomer" opacity="0.8" prefHeight="45.0" prefWidth="150.0" text="Delete">
+                              <font>
+                                  <Font name="Droid Sans" size="20.0" />
+                              </font>
+                  </Button>
+               </children>
+            </VBox>
+         </left></BorderPane>
+    </children>
+</AnchorPane>
