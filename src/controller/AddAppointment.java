@@ -41,7 +41,6 @@ public class AddAppointment implements Initializable {
     public TextField locationText;
     public static ObservableList<LocalTime> appointments = FXCollections.observableArrayList();
     public ComboBox<LocalTime> startTimeCombo;
-    public ComboBox<User> userNameCombo;
 
     /**
      * Initialize scene
@@ -51,7 +50,6 @@ public class AddAppointment implements Initializable {
 
         System.out.println("Loaded Add Appointment");
         try {
-            userNameCombo.setItems(UserDAO.displayAllUsers());
             customerNameCombo.setItems(CustomerDAO.displayAllCustomers());
             customerNameCombo.setVisibleRowCount(5);
             contactCombo.setItems(ContactDAO.displayAllContacts());
@@ -113,9 +111,8 @@ public class AddAppointment implements Initializable {
             String apptDescription = descriptionText.getText();
             String location = locationText.getText();
             String customerName = customerNameCombo.getValue().toString();
-            int contact = contactCombo.getValue().getContactID();
+            int contact = contactCombo.getValue().getEmployeeID();
             String apptType = apptTypeCombo.getValue();
-            int userID = userNameCombo.getSelectionModel().getSelectedItem().getUserID();
 
             //set date & time
             LocalDate date = datePicker.getValue();
@@ -186,6 +183,8 @@ public class AddAppointment implements Initializable {
             String formattedEnd = stringCreate.Combine(storedDateEndTime.toLocalDate().toString(), storedDateEndTime.toLocalTime().toString());
 
             //Create Object
+            int userID = LoginScreen.userID;
+
             Appointment appointment = new Appointment(apptID, apptTitle, apptDescription, location, apptType,
                     formattedStart, formattedEnd, userID, customerNameCombo.getValue().getCustomerID(), contact);
             //Save Local

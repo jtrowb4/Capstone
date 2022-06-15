@@ -8,11 +8,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
     <children>
-        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <top>
                 <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="60.0" prefWidth="720.0">
                     <children>
-                        <Label alignment="CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-translate-x: 10;" text="Appointment Scheduling Application" textAlignment="CENTER" underline="true">
+                        <Label alignment="CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-text-fill: #FF9200;" text="Appointment Scheduling Application" textAlignment="CENTER" underline="true">
                             <font>
                                 <Font name="Droid Sans" size="24.0" />
                             </font>
@@ -34,7 +34,7 @@
             <bottom>
                 <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0" BorderPane.alignment="CENTER">
                     <children>
-                        <Button fx:id="logoutButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toLoginScreen" prefHeight="30.0" prefWidth="120.0" text="Logout" textAlignment="CENTER" underline="true">
+                        <Button fx:id="logoutButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toLoginScreen" prefHeight="30.0" prefWidth="120.0" style="-fx-text-fill: #FF9200;" text="Logout" textAlignment="CENTER" underline="true">
                             <font>
                                 <Font name="Droid Sans" size="18.0" />
                             </font>
@@ -50,31 +50,34 @@
          <center>
             <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <center>
-                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 5;" BorderPane.alignment="CENTER">
-                     <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </padding>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="400.0" prefWidth="490.0" style="-fx-border-radius: 10; -fx-border-width: 3;" BorderPane.alignment="CENTER">
                      <center>
-                        <VBox alignment="CENTER" opacity="0.9" style="-fx-spacing: 20;" BorderPane.alignment="CENTER">
+                        <VBox alignment="CENTER" style="-fx-spacing: 20; -fx-background-color: white;" BorderPane.alignment="CENTER">
                            <children>
-                               <Button fx:id="scheduleButton" layoutX="302.0" layoutY="392.0" mnemonicParsing="false" onAction="#toAppointmentMenu" prefHeight="33.0" prefWidth="197.0" text="Appointment Menu">
+                               <Button fx:id="scheduleButton" layoutX="302.0" layoutY="392.0" mnemonicParsing="false" onAction="#toAppointmentMenu" prefHeight="33.0" prefWidth="197.0" style="-fx-text-fill: #FF9200;" text="Appointment Menu">
                                    <font>
                                        <Font name="Droid Sans" size="18.0" />
                                    </font>
                                </Button>
-                               <Button fx:id="customerButton" layoutX="302.0" layoutY="392.0" mnemonicParsing="false" onAction="#toCustomerMenu" prefHeight="33.0" prefWidth="197.0" text="Customer Menu">
+                               <Button fx:id="customerButton" layoutX="302.0" layoutY="392.0" mnemonicParsing="false" onAction="#toCustomerMenu" prefHeight="33.0" prefWidth="197.0" style="-fx-text-fill: #FF9200;" text="Customer Menu">
                                    <font>
                                        <Font name="Droid Sans" size="18.0" />
                                    </font>
                                </Button>
-                               <Button fx:id="reportButton" layoutX="302.0" layoutY="392.0" mnemonicParsing="false" onAction="#toReportsMenu" prefHeight="33.0" prefWidth="197.0" text="Report Menu">
+                               <Button fx:id="reportButton" layoutX="302.0" layoutY="392.0" mnemonicParsing="false" onAction="#toReportsMenu" prefHeight="33.0" prefWidth="197.0" style="-fx-text-fill: #FF9200;" text="Report Menu">
                                    <font>
                                        <Font name="Droid Sans" size="18.0" />
                                    </font>
                                </Button>
                            </children>
                         </VBox>
-                     </center></BorderPane>
+                     </center>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding></BorderPane>
                </center>
             </BorderPane>
          </center></BorderPane>

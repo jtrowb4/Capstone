@@ -44,7 +44,6 @@ public class ModifyAppointment implements Initializable {
     public static ObservableList<LocalTime> appointments = FXCollections.observableArrayList();
 
     public static ObservableList<Appointment> incomingAppointment = FXCollections.observableArrayList();
-    public ComboBox<User> userNameCombo;
 
 
     /**
@@ -55,7 +54,6 @@ public class ModifyAppointment implements Initializable {
 
         System.out.println("Loaded Modify Appointment");
         try {
-            userNameCombo.setItems(UserDAO.displayAllUsers());
             customerNameCombo.setItems(CustomerDAO.displayAllCustomers());
             customerNameCombo.setVisibleRowCount(5);
             contactCombo.setItems(ContactDAO.displayAllContacts());
@@ -106,19 +104,12 @@ public class ModifyAppointment implements Initializable {
         int contactID = appointment.getContactID();
         for (Contact contact : contactCombo.getItems()
         ) {
-            if (contactID == contact.getContactID()
+            if (contactID == contact.getEmployeeID()
             ) {
                 contactCombo.setValue(contact);
             }
         }
-        int userID = appointment.getUserID();
-        for (User user: userNameCombo.getItems()
-        ){
-            if(userID == user.getUserID()){
-                userNameCombo.setValue(user);
-            }
 
-        }
 
         String dateTime = appointment.getStartTime();
         String dateSplit[] = dateTime.split(" ");
@@ -126,9 +117,7 @@ public class ModifyAppointment implements Initializable {
         LocalTime time = LocalTime.parse(dateSplit[1]);
         LocalDateTime localDateTime = LocalDateTime.of(date,time );
         ZoneId zoneIdLocal = ZoneId.systemDefault();
-        //ZoneId utcZone = ZoneId.of("UTC");
         ZonedDateTime localZDT = ZonedDateTime.of(localDateTime, zoneIdLocal);
-        //ZonedDateTime localZDT = ZonedDateTime.ofInstant(utcZDT.toInstant(), zoneIdLocal);
 
         datePicker.setValue(localZDT.toLocalDate());
         startTimeCombo.setValue(localZDT.toLocalTime());
@@ -181,9 +170,8 @@ public class ModifyAppointment implements Initializable {
                 String apptDescription = descriptionText.getText();
                 String location = locationText.getText();
                 String customerName = customerNameCombo.getValue().toString();
-                int contact = contactCombo.getValue().getContactID();
+                int contact = contactCombo.getValue().getEmployeeID();
                 String apptType = apptTypeCombo.getValue();
-                int userID = userNameCombo.getSelectionModel().getSelectedItem().getUserID();
 
                 //set date & time
                 LocalDate date = datePicker.getValue();
@@ -259,6 +247,7 @@ public class ModifyAppointment implements Initializable {
                 String formattedEnd = stringCreate.Combine(storedDateEndTime.toLocalDate().toString(), storedDateEndTime.toLocalTime().toString());
 
                 //Create Object
+                int userID = LoginScreen.userID;
                 Appointment appointment = new Appointment(apptID, apptTitle, apptDescription, location, apptType,
                         formattedStart, formattedEnd, userID, customerNameCombo.getValue().getCustomerID(), contact);
                 //Save Local

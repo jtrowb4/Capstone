@@ -6,9 +6,9 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyCustomer">
-    <BorderPane layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+    <BorderPane layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <center>
-            <GridPane alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="450.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;" vgap="17.0" BorderPane.alignment="TOP_CENTER">
+            <GridPane alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="450.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-width: 3;" vgap="17.0" BorderPane.alignment="TOP_CENTER">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -23,7 +23,7 @@
                     <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
                 </rowConstraints>
                 <children>
-                    <Label style="-fx-translate-x: 20;" text="Customer ID#">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Customer ID#">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -31,7 +31,7 @@
                             <Insets />
                         </opaqueInsets>
                     </Label>
-                    <Label style="-fx-translate-x: 20;" text="Street Address" GridPane.rowIndex="3">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Street Address" GridPane.rowIndex="3">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -39,7 +39,7 @@
                             <Insets />
                         </opaqueInsets>
                     </Label>
-                    <Label style="-fx-translate-x: 20;" text="Country" GridPane.rowIndex="4">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Country" GridPane.rowIndex="4">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -47,7 +47,7 @@
                             <Insets />
                         </opaqueInsets>
                     </Label>
-                    <Label style="-fx-translate-x: 20;" text="Postal Code" GridPane.rowIndex="5">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Postal Code" GridPane.rowIndex="5">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -55,7 +55,7 @@
                             <Insets />
                         </opaqueInsets>
                     </Label>
-                    <Label style="-fx-translate-x: 20;" text="Phone" GridPane.rowIndex="6">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Phone" GridPane.rowIndex="6">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -63,7 +63,7 @@
                             <Insets />
                         </opaqueInsets>
                     </Label>
-                    <Label style="-fx-translate-x: 20;" text="First Name" GridPane.rowIndex="1">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="First Name" GridPane.rowIndex="1">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -71,7 +71,7 @@
                             <Insets />
                         </opaqueInsets>
                     </Label>
-                    <Label text="State/Provence" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <Label style="-fx-text-fill: #FF9200;" text="State/Provence" GridPane.columnIndex="1" GridPane.rowIndex="4">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -82,7 +82,7 @@
                             <Insets left="10.0" />
                         </GridPane.margin>
                     </Label>
-                    <Label style="-fx-translate-x: 20;" text="Last Name" GridPane.rowIndex="2">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Last Name" GridPane.rowIndex="2">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -147,7 +147,7 @@
                     </ComboBox>
                     <HBox alignment="BOTTOM_RIGHT" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                         <children>
-                            <Button fx:id="saveButton" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="55.0" text="Save">
+                            <Button fx:id="saveButton" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="55.0" style="-fx-text-fill: #FF9200;" text="Save">
                                 <font>
                                     <Font name="Droid Sans" size="12.0" />
                                 </font>
@@ -155,7 +155,7 @@
                                     <Insets bottom="2.0" />
                                 </HBox.margin>
                             </Button>
-                            <Button fx:id="cancelButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="55.0" text="Cancel">
+                            <Button fx:id="cancelButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="55.0" style="-fx-text-fill: #FF9200;" text="Cancel">
                                 <font>
                                     <Font name="Droid Sans" size="12.0" />
                                 </font>
@@ -177,7 +177,7 @@
         <top>
             <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="60.0" prefWidth="600.0">
                 <children>
-                    <Label alignment="TOP_CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-translate-x: 10;" text="Modify Customer" textAlignment="CENTER" underline="true">
+                    <Label alignment="TOP_CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-translate-x: 10; -fx-text-fill: #FF9200;" text="Modify Customer" textAlignment="CENTER" underline="true">
                         <opaqueInsets>
                             <Insets />
                         </opaqueInsets>

@@ -32,7 +32,7 @@ public class ContactDAO {
             int contactID = result.getInt("Contact_ID");
             String contactName = result.getString("Contact_Name");
             String email = result.getString("Email");
-            allContacts.add(new Contact(contactID, contactName));
+            allContacts.add(new Contact(contactID, contactName, email));
         }
         DBConnector.closeConnection();
         return allContacts;

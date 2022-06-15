@@ -107,7 +107,8 @@ public class MainMenu implements Initializable {
     Parent root = fxmlLoader.load(getClass().getResource("/view/LoginScreen.fxml"), resource);
     Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
     Scene scene = new Scene(root, 800, 600);
-    stage.setTitle("QAM2_JavaApplication");
+
+    stage.setTitle("aPEELing");
     stage.setScene(scene);
     stage.show();
     }
@@ -122,7 +123,8 @@ public class MainMenu implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/view/CustomerMenu.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 800, 600);
-        stage.setTitle("QAM2_JavaApplication: Customer Menu");
+        stage.setTitle("aPEELing: Customer Menu");
+
         stage.setScene(scene);
         stage.show();
     }
@@ -136,7 +138,7 @@ public class MainMenu implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/view/AppointmentMenu.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 800, 600);
-        stage.setTitle("QAM2_JavaApplication: Appointment Menu");
+        stage.setTitle("aPEELing: Appointment Menu");
         stage.setScene(scene);
         stage.show();
     }
@@ -150,7 +152,7 @@ public class MainMenu implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/view/ReportsMenu.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 800, 600);
-        stage.setTitle("QAM2_JavaApplication: Reports Menu");
+        stage.setTitle("aPEELing: Reports Menu");
         stage.setScene(scene);
         stage.show();
     }

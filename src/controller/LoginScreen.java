@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import model.User;
 
 import java.io.FileWriter;
@@ -16,7 +17,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.time.Instant;
-import java.time.LocalDateTime;
+
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -47,7 +48,7 @@ public class LoginScreen implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         zoneIDText.setText("'" + ZoneId.systemDefault() + " " + ZoneId.systemDefault().getRules().getOffset(Instant.now()) + "'");
-        System.out.println("QAM2_JavaApplication v1.2.0 Loaded");
+        System.out.println("aPEELing - Appointment Scheduling Application v1.0.0 Loaded");
     }
     /**
      * Login button that ties to UserDAO
@@ -59,9 +60,9 @@ public class LoginScreen implements Initializable {
 
         try{
            User userLogin = UserDAO.getUserLogin(userName);
-           String userLoginName = userLogin.getUserName();
+           String userLoginName = userLogin.getEmployeeName();
            String userLoginPassword = userLogin.getPassword();
-           int userLoginUserID = userLogin.getUserID();
+           int userLoginUserID = userLogin.getEmployeeID();
            userID = userLoginUserID;
             if ((userLoginName.equals(userName)) && (userLoginPassword.equals(password))){
                System.out.println("Login Success");
@@ -70,7 +71,7 @@ public class LoginScreen implements Initializable {
                Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
                Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
                Scene scene = new Scene(root, 800, 600);
-               stage.setTitle("QAM2_JavaApplication");
+               stage.setTitle("aPEELing");
                stage.setScene(scene);
                stage.show();
            }
@@ -118,7 +119,6 @@ public class LoginScreen implements Initializable {
 
         ZonedDateTime dateTimeUTC = ZonedDateTime.now(ZoneId.of("UTC"));
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        //System.out.println(dateTimeUTC.format(formatter));
 
         if(didSucceed == true){
             entry = "Login Success | " + userName + " | " + dateTimeUTC.format(formatter) + " [UTC] ";

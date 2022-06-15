@@ -22,7 +22,7 @@ public class ReportsMenu {
         Parent root = FXMLLoader.load(getClass().getResource("/view/Report1.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root, 600, 450);
-        stage.setTitle("QAM2_JavaApplication: Report 1");
+        stage.setTitle("aPEELing: Report 1");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -33,7 +33,7 @@ public class ReportsMenu {
         Parent root = FXMLLoader.load(getClass().getResource("/view/Report2.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root, 600, 450);
-        stage.setTitle("QAM2_JavaApplication: Report 2");
+        stage.setTitle("aPEELing: Report 2");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -44,7 +44,7 @@ public class ReportsMenu {
         Parent root = FXMLLoader.load(getClass().getResource("/view/Report3.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root, 600, 450);
-        stage.setTitle("QAM2_JavaApplication: Report 3");
+        stage.setTitle("aPEELing: Report 3");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -55,7 +55,7 @@ public class ReportsMenu {
         Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 800, 600);
-        stage.setTitle("QAM2_JavaApplication");
+        stage.setTitle("aPEELing");
         stage.setScene(scene);
         stage.show();
     }

@@ -6,11 +6,11 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Report1">
-    <BorderPane layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+    <BorderPane layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <top>
             <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="TOP_LEFT">
                 <children>
-                    <Label alignment="TOP_CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-translate-x: 10;" text="Total Scheduled Appointments by Month and Type " textAlignment="CENTER" underline="true">
+                    <Label alignment="TOP_CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-translate-x: 10; -fx-text-fill: #FF9200;" text="Total Scheduled Appointments by Month and Type " textAlignment="CENTER" underline="true">
                         <opaqueInsets>
                             <Insets />
                         </opaqueInsets>
@@ -33,7 +33,7 @@
                 </padding></HBox>
         </top>
         <left>
-            <GridPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="225.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;" vgap="20.0" BorderPane.alignment="TOP_CENTER">
+            <GridPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="225.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-width: 3;" vgap="20.0" BorderPane.alignment="TOP_CENTER">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 </columnConstraints>
@@ -43,7 +43,7 @@
                     <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
                 </rowConstraints>
                 <children>
-                    <Label style="-fx-translate-x: 20;" text="Month">
+                    <Label style="-fx-translate-x: 20; -fx-text-fill: #FF9200;" text="Month">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -57,7 +57,7 @@
                             <Insets top="5.0" />
                         </GridPane.margin>
                     </Label>
-                    <Label text="Appt Type" GridPane.rowIndex="1">
+                    <Label style="-fx-text-fill: #FF9200;" text="Appt Type" GridPane.rowIndex="1">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -77,7 +77,7 @@
                             <Insets left="80.0" />
                         </GridPane.margin>
                     </ComboBox>
-                    <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="100.0" text="Submit" GridPane.rowIndex="2">
+                    <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="100.0" style="-fx-text-fill: #FF9200;" text="Submit" GridPane.rowIndex="2">
                         <font>
                             <Font name="Droid Sans" size="14.0" />
                         </font>
@@ -97,7 +97,7 @@
       <right>
          <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" spacing="20.0" BorderPane.alignment="TOP_LEFT">
             <children>
-               <Label text="Result">
+               <Label style="-fx-text-fill: #FF9200;" text="Result">
                   <font>
                      <Font name="Droid Sans" size="18.0" />
                   </font>

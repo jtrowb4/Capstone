@@ -71,7 +71,7 @@ public class CustomerMenu implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
             Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             Scene scene = new Scene(root, 800, 600);
-            stage.setTitle("QAM2_JavaApplication");
+            stage.setTitle("aPEELing");
             stage.setScene(scene);
             stage.show();
         }
@@ -86,7 +86,7 @@ public class CustomerMenu implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("/view/AddCustomer.fxml"));
             Stage stage = new Stage(); //(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             Scene scene = new Scene(root, 600, 450);
-            stage.setTitle("QAM2_JavaApplication: Add Customer");
+            stage.setTitle("aPEELing: Add Customer");
             stage.setScene(scene);
             stage.setResizable(false);
             stage.initModality(Modality.APPLICATION_MODAL);
@@ -112,7 +112,7 @@ public class CustomerMenu implements Initializable {
 
                 Stage stage = new Stage(); //(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root, 600, 450);
-                stage.setTitle("QAM2_JavaApplication: Modify Customer");
+                stage.setTitle("aPEELing: Modify Customer");
                 stage.setScene(scene);
                 stage.setResizable(false);
                 stage.initModality(Modality.APPLICATION_MODAL);

@@ -8,11 +8,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentMenu">
     <children>
-        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <top>
                 <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="60.0" prefWidth="720.0">
                     <children>
-                        <Label alignment="CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" text="Appointment Menu" underline="true">
+                        <Label alignment="CENTER" contentDisplay="TOP" depthTest="ENABLE" opacity="0.8" style="-fx-text-fill: #FF9200;" text="Appointment Menu" underline="true">
                             <font>
                                 <Font name="Droid Sans" size="24.0" />
                             </font>
@@ -34,7 +34,7 @@
             <bottom>
                 <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="720.0" BorderPane.alignment="CENTER">
                     <children>
-                        <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toMainMenu" prefHeight="30.0" prefWidth="120.0" text="Back" textAlignment="CENTER" underline="true">
+                        <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toMainMenu" prefHeight="30.0" prefWidth="120.0" style="-fx-text-fill: #FF9200;" text="Back" textAlignment="CENTER" underline="true">
                             <font>
                                 <Font name="Droid Sans" size="18.0" />
                             </font>
@@ -45,7 +45,7 @@
                     </BorderPane.margin></HBox>
             </bottom>
             <right>
-                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="533.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-insets: 2; -fx-translate-x: -20;" BorderPane.alignment="CENTER">
+                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="533.0" style="-fx-border-color: linear-gradient(to top, #FFFFF0, #FF9200); -fx-border-radius: 10; -fx-border-insets: 2; -fx-border-width: 3; -fx-translate-x: -20;" BorderPane.alignment="CENTER">
                     <center>
                         <TableView fx:id="apptTable" prefHeight="314.0" prefWidth="470.0">
                             <columns>
@@ -71,7 +71,7 @@
                     <top>
                         <HBox alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="350.0" style="-fx-spacing: 10;" BorderPane.alignment="CENTER">
                             <children>
-                                <Label alignment="TOP_LEFT" opacity="0.8" text="Appointments">
+                                <Label alignment="TOP_LEFT" opacity="0.8" style="-fx-text-fill: #FF9200;" text="Appointments">
                                     <font>
                                         <Font name="Droid Sans" size="20.0" />
                                     </font>
@@ -82,7 +82,7 @@
                                         <Insets bottom="5.0" left="10.0" right="180.0" />
                                     </HBox.margin>
                                 </Label>
-                        <RadioButton fx:id="allWeekRadio" mnemonicParsing="false" onAction="#weekApptOn" text="Week">
+                        <RadioButton fx:id="allWeekRadio" mnemonicParsing="false" onAction="#weekApptOn" style="-fx-text-fill: #FF9200;" text="Week">
                            <HBox.margin>
                               <Insets bottom="5.0" />
                            </HBox.margin>
@@ -93,7 +93,7 @@
                               <ToggleGroup fx:id="apptGroup" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton fx:id="allMonthRadio" mnemonicParsing="false" onAction="#monthApptOn" text="Month" toggleGroup="$apptGroup">
+                        <RadioButton fx:id="allMonthRadio" mnemonicParsing="false" onAction="#monthApptOn" style="-fx-text-fill: #FF9200;" text="Month" toggleGroup="$apptGroup">
                            <HBox.margin>
                               <Insets bottom="5.0" />
                            </HBox.margin>
@@ -101,7 +101,7 @@
                               <Font name="Droid Sans" size="12.0" />
                            </font>
                         </RadioButton>
-                        <RadioButton fx:id="allApptRadio" mnemonicParsing="false" onAction="#allApptOn" selected="true" text="All" toggleGroup="$apptGroup">
+                        <RadioButton fx:id="allApptRadio" mnemonicParsing="false" onAction="#allApptOn" selected="true" style="-fx-text-fill: #FF9200;" text="All" toggleGroup="$apptGroup">
                            <font>
                               <Font name="Droid Sans" size="12.0" />
                            </font>
@@ -140,17 +140,17 @@
             <left>
                 <VBox maxHeight="-Infinity" prefHeight="400.0" prefWidth="210.0" style="-fx-spacing: 40; -fx-alignment: center;" BorderPane.alignment="CENTER">
                     <children>
-                        <Button fx:id="addAppointmentButton" mnemonicParsing="false" onAction="#loadAddAppointment" opacity="0.8" prefHeight="45.0" prefWidth="150.0" text="Add">
+                        <Button fx:id="addAppointmentButton" mnemonicParsing="false" onAction="#loadAddAppointment" opacity="0.8" prefHeight="45.0" prefWidth="150.0" style="-fx-text-fill: #FF9200;" text="Add">
                             <font>
                                 <Font name="Droid Sans" size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="modifyAppointmentButton" mnemonicParsing="false" onAction="#loadModifyAppointment" opacity="0.8" prefHeight="45.0" prefWidth="150.0" text="Modify">
+                        <Button fx:id="modifyAppointmentButton" mnemonicParsing="false" onAction="#loadModifyAppointment" opacity="0.8" prefHeight="45.0" prefWidth="150.0" style="-fx-text-fill: #FF9200;" text="Modify">
                             <font>
                                 <Font name="Droid Sans" size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="deleteAppointmentButton" mnemonicParsing="false" onAction="#loadDeleteAppointment" opacity="0.8" prefHeight="45.0" prefWidth="150.0" text="Delete">
+                        <Button fx:id="deleteAppointmentButton" mnemonicParsing="false" onAction="#loadDeleteAppointment" opacity="0.8" prefHeight="45.0" prefWidth="150.0" style="-fx-text-fill: #FF9200;" text="Delete">
                             <font>
                                 <Font name="Droid Sans" size="20.0" />
                             </font>

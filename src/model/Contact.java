@@ -4,45 +4,21 @@ package model;
  *
  * @author James Trowbridge
  */
-public class Contact {
+public class Contact extends Employee{
 
-    private int contactID;
-    private String contactName;
+    private String email;
 
-    public Contact(int contactID, String contactName) {
-        this.contactID = contactID;
-        this.contactName = contactName;
+    public Contact(int contactID, String contactName, String email) {
+        super(contactID, contactName);
+        this.email = email;
+
     }
-    /**
-     * @return the contactID
-     */
-    public int getContactID() {
-        return contactID;
+
+    public String getEmail() {
+        return email;
     }
-    /**
-     * @param contactID to set
-     */
-    public void setContactID(int contactID) {
-        this.contactID = contactID;
-    }
-    /**
-     * @return the contactName
-     */
-    public String getContactName() {
-        return contactName;
-    }
-    /**
-     * @param contactName to set
-     */
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
-    }
-    /**
-     * override toString
-     * @return the contactName
-     */
-    @Override
-    public String toString(){
-        return (contactName);
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

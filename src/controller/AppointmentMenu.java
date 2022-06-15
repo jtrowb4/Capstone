@@ -80,7 +80,7 @@ public class AppointmentMenu implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 800, 600);
-        stage.setTitle("QAM2_JavaApplication");
+        stage.setTitle("aPEELing");
         stage.setScene(scene);
         stage.show();
     }
@@ -114,7 +114,7 @@ public class AppointmentMenu implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/view/AddAppointment.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root, 600, 450);
-        stage.setTitle("QAM2_JavaApplication: Add Appointment");
+        stage.setTitle("aPEELing: Add Appointment");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -138,7 +138,7 @@ public class AppointmentMenu implements Initializable {
 
             Stage stage = new Stage();
             Scene scene = new Scene(root, 600, 450);
-            stage.setTitle("QAM2_JavaApplication: Modify Appointment");
+            stage.setTitle("aPEELing: Modify Appointment");
             stage.setScene(scene);
             stage.setResizable(false);
             stage.initModality(Modality.APPLICATION_MODAL);
